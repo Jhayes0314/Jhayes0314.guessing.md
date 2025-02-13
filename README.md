@@ -7,6 +7,7 @@ flowchart TD
 Start([Start]) -->|Generate Random Number| GenerateNum
   GenerateNum --> |Prompt User for Input| GetInput
   GetInput -->|Validate Input| CheckInput
+  CheckInput -->|Invalid Input| ErrorMsg
   ErrorMsg -->|Prompt User Again| GetInput
   CheckInput -->|Valid Input| CompareNum
   CompareNum -->|Guess Too Low| TooLow
